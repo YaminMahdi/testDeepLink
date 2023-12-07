@@ -12,8 +12,7 @@
             if (/Android/i.test(navigator.userAgent)) {
                 var url = [
                     'intent://',
-                    'othoba.com',
-                    // location.href.replace(/https?:\/\//i, ""),
+                    location.href.replace(/https?:\/\//i, ""),
                     '#Intent;scheme=https;package=com.othoba.android;end'
                 ].join('');
                 window.location = url;
