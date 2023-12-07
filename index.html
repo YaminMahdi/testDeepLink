@@ -11,7 +11,8 @@
         window.onload = function () {
 
             var app = "https://www.othoba.com";
-            window.location = app;
+            var url = "intent://www.othoba.com/#Intent;scheme=Othoba;package=com.othoba;end";
+            window.location = url;
 
             function killPopup() {
                 window.removeEventListener('pagehide', killPopup);
