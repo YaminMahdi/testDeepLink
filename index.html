@@ -10,25 +10,13 @@
     <script type="text/javascript">
         window.onload = function () {
 
-            var desktopFallback = "https://www.othoba.com/bicycle",
-                mobileFallback = "https://www.othoba.com/bicycle",
-                app = "app.othoba.com://bicycle";
-
-            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                window.location = app;
-                window.setTimeout(function () {
-                    window.location = mobileFallback;
-                }, 25);
-            } else {
-                window.location = desktopFallback;
-            }
+            var app = "app.othoba.com://bicycle";
+            window.location = app;
 
             function killPopup() {
                 window.removeEventListener('pagehide', killPopup);
             }
-
             window.addEventListener('pagehide', killPopup);
-
         };
     </script>
 </body>
