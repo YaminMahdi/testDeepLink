@@ -9,10 +9,11 @@
 <body>
     <script type="text/javascript">
         window.onload = function () {
+            window.location.replace("othoba.com")
             if (/Android/i.test(navigator.userAgent)) {
                 var url = [
                     'intent://',
-                    'www.othoba.com/duranta-stl-18-s-spaark-breeze-26-red-wcarrier/',
+                    location.href.replace(/https?:\/\//i, ""),
                     '#Intent;scheme=https;package=com.othoba.android;end'
                 ].join('');
                 window.location = url;
