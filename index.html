@@ -13,11 +13,6 @@
             var app = "https://www.othoba.com";
             var url = "intent://www.othoba.com/#Intent;scheme=https;package=com.othoba.android;end";
             window.location = url;
-
-            function killPopup() {
-                window.removeEventListener('pagehide', killPopup);
-            }
-            window.addEventListener('pagehide', killPopup);
         };
     </script>
 </body>
